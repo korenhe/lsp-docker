@@ -299,8 +299,7 @@ the docker container to run the language server."
   "Get the server container name"
   (let* ((lsp-server-info (gethash 'server config))
          (lsp-server-subtype (gethash 'subtype lsp-server-info)))
-    (if (equal lsp-server-subtype "container")
-        (gethash 'name lsp-server-info))))
+        (gethash 'container-name lsp-server-info)))
 
 (defun lsp-docker-get-server-image-name (config)
   "Get the server image name"
